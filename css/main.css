@@ -1,0 +1,73 @@
+/*
+* Alby Mathews Bruse
+* Student No : 8980406
+*/
+
+body {
+    width: 90%;
+    max-width: 90%;
+    margin: auto;
+    font: 12px Arial;
+    padding: 10px;
+}
+
+.headfoot {
+    border: 2px red solid;
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
+    clear: both;
+}
+
+h1 , h2 {
+    color: green;
+    font-variant: small-caps;
+}
+
+footer p {
+    font-size: smaller;
+    color: gray;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding: 5px;
+    margin: auto;
+}
+
+main {
+    float: left;
+    width: 67%;
+    padding: 5px;
+    margin: auto;
+}
+
+.mainimg {
+    border: 2px solid ;
+}
+
+figcaption {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+q {
+    font-family: cursive;
+    font-style: italic;
+    font-size: large;
+}
+
+ul li {
+    list-style:none ;
+    line-height: 2rem;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+aside a:hover {
+    color: red;
+}
