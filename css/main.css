@@ -7,33 +7,38 @@ body {
     width: 90%;
     max-width: 90%;
     margin: auto;
-    font: 12px Arial;
+    font: 1rem Arial;
+    color: #f8e0e5;
     padding: 10px;
+    background-color: #18070c;
 }
 
 .headfoot {
     border: 2px red solid;
-    border-radius: 15px;
     padding: 5px;
     margin: auto;
     clear: both;
+    text-align: center;
+    background-image: Linear-gradient(#e58da4, #7d471c,#d9a956);
 }
 
 h1 , h2 {
-    color: green;
+    color: #eae9fc;
     font-variant: small-caps;
 }
 
 footer p {
     font-size: smaller;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 aside {
     float: right;
-    width: 30%;
+    width: 300px;
     padding: 5px;
     margin: auto;
+    background-image: url("../images/APJ\ Abdul\ Kalam2.jpg");
+    background-size:contain;
 }
 
 main {
@@ -43,8 +48,15 @@ main {
     margin: auto;
 }
 
+main p{
+    display: inline;
+}
 .mainimg {
+    height: 200px;
+    width: auto;
+    float: left;
     border: 2px solid ;
+    shape-outside: polygon(-0.23% -0.27%, 100.41% -0.03%, 99.46% 100.19%, 0.38% 99.25%);
 }
 
 figcaption {
@@ -65,9 +77,69 @@ ul li {
 
 ul>li>a {
     text-decoration: none;
-    color: black;
+    color: #eae9fc;
 }
 
 aside a:hover {
+    padding: 10px;
     color: red;
+    border-radius: 10px;
+    background-color: #eae9fc;
+}
+
+.navigation {
+    display: flex;
+    margin: 1rem 0;
+    background-color: #020024;
+    height: 2rem;
+    line-height: 2rem;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+.navigation a{
+    text-decoration: none;
+    text-align: center;
+    color: #eae9fc;
+    font-size: 1rem;
+    font-weight: 700;
+    flex: 100% 1 1;
+
+}
+
+.navigation a:hover{
+    background-color: #3a31d8;
+    color: #020024;
+}
+.mediacontainer{
+    padding-left: 150px;
+    padding-bottom: 20px;
+    height: 422px;
+    width: 750px;
+}
+
+.imagegrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.imagegrid img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    clip-path: polygon(5.6% 3.6%, 39.69% -0.69%, 94% 8.6%, 100.28% 32.97%, 98% 99%, 38.46% 90.09%, 3% 93%, -1.33% 20.57%);
+}
+
+input[type=text], 
+input[type=email],
+input[type=submit],
+select, option,textarea{
+    width: 50%;
+    display: block;
+    height: 2em;
+}
+
+th,td {
+    border: 1px solid white;
 }
