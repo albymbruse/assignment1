@@ -2,22 +2,26 @@
 * Alby Mathews Bruse
 * Student No : 8980406
 */
+html{
+    font: 1rem;
+}
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    max-width: 90%;
     margin: auto;
     font: 1rem Arial;
     color: #f8e0e5;
-    padding: 10px;
+    padding: 0.625rem;
     background-color: #18070c;
 }
 
 .headfoot {
     border: 2px red solid;
-    padding: 5px;
+    padding: 0.313rem;
+    width: 100%;
     margin: auto;
-    clear: both;
     text-align: center;
     background-image: Linear-gradient(#e58da4, #7d471c,#d9a956);
 }
@@ -32,31 +36,41 @@ footer p {
     color: rgb(255, 255, 255);
 }
 
-aside {
-    float: right;
-    width: 300px;
-    padding: 5px;
-    margin: auto;
-    background-image: url("../images/APJ\ Abdul\ Kalam2.jpg");
-    background-size:contain;
+.mainbody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
 }
 
+
 main {
-    float: left;
-    width: 67%;
-    padding: 5px;
-    margin: auto;
+    flex: 2 1 70%;
+    padding: 0.313rem;
 }
+
+aside {
+    flex: 1 1 30%;
+    padding: 0.313rem;
+    background-color: black;
+    background-image: url("../images/aside2.jpg");
+    background-position:auto;
+}
+
+
 
 main p{
     display: inline;
 }
+
 .mainimg {
     height: 200px;
     width: auto;
     float: left;
-    border: 2px solid ;
-    shape-outside: polygon(-0.23% -0.27%, 100.41% -0.03%, 99.46% 100.19%, 0.38% 99.25%);
+    border: 2px solid #1d1d1d;
+    shape-outside: polygon(-0.23% -0.27%, 50.78% 0.8%, 62.94% 10.92%, 64.53% 23.58%, 66.99% 41.63%, 66.93% 54.65%, 68.51% 76.28%, 61.25% 87.65%, 54.67% 96.39%, 99.46% 100.19%, 0.38% 99.25%);
 }
 
 figcaption {
@@ -77,14 +91,19 @@ ul li {
 
 ul>li>a {
     text-decoration: none;
-    color: #eae9fc;
+    color: #ffffff;
+}
+
+aside h2{
+    background-color: #000000;
 }
 
 aside a:hover {
-    padding: 10px;
-    color: red;
+    padding: 0.625rem;
+    background-color: #3a31d8;
+    color: #020024;
+    font-weight: bold;
     border-radius: 10px;
-    background-color: #eae9fc;
 }
 
 .navigation {
@@ -112,22 +131,22 @@ aside a:hover {
     background-color: #3a31d8;
     color: #020024;
 }
+
 .mediacontainer{
-    padding-left: 150px;
-    padding-bottom: 20px;
-    height: 422px;
-    width: 750px;
+    padding-bottom: 1.2rem;
+    height: 32vw;
+    width: 100%;
 }
 
 .imagegrid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
 }
 
 .imagegrid img{
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
+    height: 16rem;
+    width: 16rem;
     clip-path: polygon(5.6% 3.6%, 39.69% -0.69%, 94% 8.6%, 100.28% 32.97%, 98% 99%, 38.46% 90.09%, 3% 93%, -1.33% 20.57%);
 }
 
@@ -140,6 +159,71 @@ select, option,textarea{
     height: 2em;
 }
 
-th,td {
+table, th,td {
     border: 1px solid white;
+    padding: 0.625rem;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 800px) {
+    
+    .mainbody{
+        flex-wrap: wrap;
+    }
+
+    aside{
+        background-image: url("../images/kalamaside.jpeg"); 
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position:right;
+    }
+
+    .mediacontainer{
+        height: 64vw;
+    }
+
+    input[type=text], 
+input[type=email],
+input[type=submit],
+select, option,textarea{
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    body{
+        font: 0.7rem;
+    }
+    
+    .mainbody{
+        flex-wrap: wrap;
+    }
+
+    .imagegrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    aside{
+        background-image: url("../images/kalamaside.jpeg"); 
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position:right;
+    }
+
+    .mediacontainer{
+        height: 64vw;
+    }
+
+    input[type=text], 
+input[type=email],
+input[type=submit],
+select, option,textarea{
+        width: 100%;
+    }
 }
